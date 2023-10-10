@@ -15,7 +15,6 @@ const HomeScreen = ({ navigation }) => {
       userInfo: { customKey: 'customValue' },
       applicationIconBadgeNumber: 1,
     };
-  
     const fireDate = new Date();
     fireDate.setSeconds(fireDate.getSeconds() + 5);
     PushNotificationIOS.addNotificationRequest({
@@ -26,7 +25,7 @@ const HomeScreen = ({ navigation }) => {
       ...notificationDetails,
     });
   };
-  
+  // What branch is this? Master branch
     return (
         <View>
             <Text>Home Screen</Text>
