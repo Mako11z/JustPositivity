@@ -24,13 +24,13 @@
  const App = () => {
  
      deleteAllEntries();
-     const e1 = createPosEntry("This is my name");
+     const e1 = createPosEntry("You are enough");
      createReflection("Hey this is my first reflection", e1._id);
-     createReflection("Im am a srub", e1._id);
-     createReflection("This app is going really well. Im learningt alot from this maby, im using chat gpt to kinda of do a lot but its still pretty cool", e1._id);
-     const e2 = createPosEntry("This gane is prettyu fgood");
-     createReflection("Wassup", e2._id);
-     createReflection("Wasssssup", e2._id);
+     createReflection("One thing I want to work on is not being self concious about my looks. I just need to love myself", e1._id);
+     createReflection("I need to work on myself in a way where I love myself", e1._id);
+     const e2 = createPosEntry("Its okay to mess up");
+     createReflection("I honestly hate messing up. I dont want to let anyone down", e2._id);
+     createReflection("I guess I can grow from my mess ups and learn from them", e2._id);
  
    return (
      <NavigationContainer>

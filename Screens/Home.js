@@ -4,15 +4,6 @@ import React, { useEffect, useState } from 'react';
 import PushNotification from 'react-native-push-notification';
 
 const HomeScreen = ({ navigation }) => {
-  /*const scheduleLocalNotification = () => {
-    // Schedule a local notification
-PushNotification.localNotification({
-  channelId: 'default-channel-id', // Channel ID (for Android 8+)
-  title: 'Hello world',
-  message: 'Hello everybody',
-  // Add other options here as needed
-});
-  }*/
   const scheduleLocalNotification = () => {
     // Define the notification details
     const notificationDetails = {
