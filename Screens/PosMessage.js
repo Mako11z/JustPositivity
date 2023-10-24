@@ -10,7 +10,6 @@ import { useNavigation } from '@react-navigation/native';
 const PosMessageScreen = () => {
     const [posEntryData, setPosEntryData] = useState([]); // State to store all of the posEntries
     const [newPosEntryContent, setPosEntryContent] = useState(""); // State variavle to hold posEntry content
-
     const nav = useNavigation(); // Navigation hook
     useEffect(() => {
         const data = readPosEntries();
@@ -35,7 +34,6 @@ const PosMessageScreen = () => {
         const data = readPosEntries();
         setPosEntryData(data);
     };
-
     return (
         <SafeAreaView>
         <View>
