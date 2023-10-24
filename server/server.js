@@ -1,15 +1,16 @@
-const express = require('express');
-const cron = require('node-cron');
-const WebSocket = require('ws');
-const http = require('http');
+const express = require('express'); 
+const cron = require('node-cron'); // Schedule task at specified intervals
+const WebSocket = require('ws'); // Websocket communication
+const http = require('http'); // Create http servers
 
 const app = express();
-const port = 3000;
+const port = 3000; // Listen on port 3000
 
 
 
 // Create an HTTP server and attach WebSocket server to it
-const server = http.createServer(app);
+//const server = http.createServer(app);
+const server = http.createServer();
 const wss = new WebSocket.Server({ server });
 
 // WebSocket connection handling
