@@ -77,3 +77,13 @@ export const deleteAllEntries = () => {
     }
 };
 
+export const generateRandomElement = () => {
+    try {
+        const posEntries = realm.objects('PosEntry');
+        const randomIndex = Math.floor(Math.random() * posEntries.length);
+        return posEntries[randomIndex].content;
+    } catch (error) {
+        console.error("Error grabbing random index: ", error);
+    }
+};
+
