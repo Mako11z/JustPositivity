@@ -9,7 +9,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, SafeAreaView, TouchableOpacity, AppState, FlatList, Button } from 'react-native';
 import {createRealmContext} from '@realm/react';
 import realm from './RealmFiles/realmConfig';
-import {NavigationContainer} from '@react-navigation/native';
+import {NavigationContainer, useNavigation} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import PosMessageScreen from './Screens/PosMessage';
@@ -22,10 +22,10 @@ import WebSocket from 'react-native-websocket';
 import loadPosMessages from './Functions/loadMessages';
 
 const Stack = createNativeStackNavigator();
-const App = ({}) => {
+const App = () => {
 
   const [daily_pos, setDailyPos] = useState(generateRandomElement());
-
+  
     useEffect(() => { 
       const initilizeApp = () => {
         // Load the initial positive messages into databse
@@ -81,9 +81,8 @@ const App = ({}) => {
       <Stack.Screen
         name="Home"
         options={{ title: 'Home' }}
-        initialParams={{ pos_message_received: daily_pos }}
       >
-        {() => (
+        {({ navigation }) => (
         <View>
           <Text>Home Screen</Text>
           <Text>Daily Positivity {daily_pos}</Text>
