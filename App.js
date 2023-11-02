@@ -13,7 +13,6 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import PosMessageScreen from './Screens/PosMessage';
-//import HomeScreen from './Screens/Home';
 import ReflectionScreen from './Screens/Reflections';
 
 import { createPosEntry, createReflection, deleteAllEntries, generateRandomElement } from './RealmFiles/realmFunctions';
@@ -23,7 +22,7 @@ import WebSocket from 'react-native-websocket';
 import loadPosMessages from './Functions/loadMessages';
 
 const Stack = createNativeStackNavigator();
-const App = ({navigation}) => {
+const App = ({}) => {
 
   const [daily_pos, setDailyPos] = useState(generateRandomElement());
 
