@@ -18,7 +18,7 @@ wss.on('connection', (ws) => {
   console.log('WebSocket connected');
 
   // Schedule a notification every 10 seconds
-  const cronJob = cron.schedule('*/10 * * * * *', () => {
+  const cronJob = cron.schedule('*/60 * * * * *', () => {
     // Notify the connected client
     if (ws.readyState === WebSocket.OPEN) {
       ws.send('SendPushNotification');

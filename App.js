@@ -14,6 +14,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import PosMessageScreen from './Screens/PosMessage';
 import ReflectionScreen from './Screens/Reflections';
+import CreatePosEntryScreen from './Screens/CreatePosEntry';
+import CreateReflectionScreen from './Screens/CreateReflection';
 
 import { createPosEntry, createReflection, deleteAllEntries, generateRandomElement } from './RealmFiles/realmFunctions';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -21,31 +23,28 @@ import PushNotification from 'react-native-push-notification';
 import WebSocket from 'react-native-websocket';
 import loadPosMessages from './Functions/loadMessages';
 
+import styles from './Styles/styles';
+
 const Stack = createNativeStackNavigator();
 const App = () => {
-
   const [daily_pos, setDailyPos] = useState(generateRandomElement());
-  
     useEffect(() => { 
       const initilizeApp = () => {
         // Load the initial positive messages into databse
-      loadPosMessages();
-      // Generate the first positive message
-      console.log("First pos", daily_pos);
-      //console.log("hey opeing socket ");
-     // WebSocket connection
-     const ws = new WebSocket('ws://localhost:3000'); // Use your server's IP address
-     // When connection is open, log it
-     ws.onopen = () => {
+        loadPosMessages();
+        // WebSocket connection
+        const ws = new WebSocket('ws://localhost:3000'); // Use your server's IP address
+        // When connection is open, log it
+        ws.onopen = () => {
        console.log('WebSocket connected');
-     };
-     // When message is recieved, log it
-     ws.onmessage = (event) => {
+      };
+        // When message is recieved, log it
+        ws.onmessage = (event) => {
        console.log('WebSocket message received:', event.data);
-     };
-    };
+       };
+      };
       initilizeApp();
-   }, []);
+    }, []);
  
    const scheduleImmediateNotification = () => {
      // Generate new positive message
@@ -84,14 +83,26 @@ const App = () => {
       >
         {({ navigation }) => (
         <View>
-          <Text>Home Screen</Text>
-          <Text>Daily Positivity {daily_pos}</Text>
-          <Button
-            title="Positive Messages"
-            onPress={() => {
-            navigation.navigate('PosMessage');
-          }}
-        />
+          <View style={styles.title_container}>
+            <Text style={styles.title_text}> JustPositivity </Text>
+          </View>
+          <View style={styles.welcome_container}>
+            <Text style={styles.welcome_text}>Welcome Back Isaiah!</Text>
+          </View>
+          <View style={styles.positivity_container}>
+            <Text style={styles.daily_pos_text}>  {daily_pos} </Text>
+          </View>
+          <View style={styles.buttonContainer}>
+            <TouchableOpacity
+             title="Positive Messages"
+              onPress={() => {
+              navigation.navigate('PosMessage');
+            }}
+            style={styles.button}
+          > 
+            <Text>Postive Messages</Text>
+          </TouchableOpacity>
+          </View>
       </View>
        )}
       </Stack.Screen>
@@ -101,9 +112,19 @@ const App = () => {
           options={{title: 'Positive Entries'}}
         />
         <Stack.Screen
+          name='CreatePosEntry'
+          component={CreatePosEntryScreen}
+          options={{title: 'Create Positive Entry'}}
+        />
+        <Stack.Screen
           name='Reflections'
           component={ReflectionScreen}
           options={{ title: 'Reflections' }}
+        />
+        <Stack.Screen
+          name='CreateReflection'
+          component={CreateReflectionScreen}
+          options={{title: 'Create you reflection'}}
         />
       </Stack.Navigator>
     </NavigationContainer>

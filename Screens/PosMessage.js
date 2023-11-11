@@ -1,15 +1,18 @@
-import { View, Text, SafeAreaView, TouchableOpacity, Button, TextInput } from 'react-native';
+import { View, Text, SafeAreaView, TouchableOpacity, Button, TextInput, FlatList } from 'react-native';
 import {createRealmContext} from '@realm/react';
 import realm from '../RealmFiles/realmConfig';
 import { createPosEntry, readPosEntries } from '../RealmFiles/realmFunctions';
 import { useEffect, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
+import styles from '../Styles/styles';
+
 
 
 const PosMessageScreen = () => {
     const [posEntryData, setPosEntryData] = useState([]); // State to store all of the posEntries
     const [newPosEntryContent, setPosEntryContent] = useState(""); // State variavle to hold posEntry content
+    
     const nav = useNavigation(); // Navigation hook
     useEffect(() => {
         const data = readPosEntries();
@@ -22,37 +25,32 @@ const PosMessageScreen = () => {
         nav.navigate('Reflections', { posEntryId: posEntryId.toHexString() });
     };
 
-    // Add a new posEntry
-    const addNewPosEntry = () => {
-        if (newPosEntryContent.trim() === "") return;
-        createPosEntry(newPosEntryContent);
+    // Navigate to create positive entry screen
+    const navToCreatePosEntryScreen = () => {
+        nav.navigate('CreatePosEntry');
+    }
 
-        // Clear the input fields
-        setPosEntryContent('');
-
-        // Refresh the content
-        const data = readPosEntries();
-        setPosEntryData(data);
-    };
+    // Render each item as we scroll through the list of positiev entries
+    const renderItem = ({ item }) => (
+        <TouchableOpacity
+          key={item._id}
+          onPress={() => navToReflectScreen(item._id)}
+        >
+          <View style={styles.positive_entries_container}>
+            <Text>{item.content}</Text>
+          </View>
+        </TouchableOpacity>
+      );
+    
     return (
-        <SafeAreaView>
-        <View>
-            <Text>Reflect Screen</Text>
-            <TextInput
-                placeholder='Add something positive'
-                value={newPosEntryContent}
-                onChangeText={(text) => setPosEntryContent(text)}
+        <SafeAreaView style={{ flex: 1 }}>
+        <View style={{ flex: 1 }}>
+            <Button title='Create your own positivity!' onPress={navToCreatePosEntryScreen} />
+            <FlatList
+                data={posEntryData}
+                renderItem={renderItem}
+                keyExtractor={(item) => item._id}
             />
-            <Button title='Add new PosEntry' onPress={addNewPosEntry} />
-            {posEntryData.map((item) => (
-                <TouchableOpacity
-                    key={item._id}
-                    onPress={() => navToReflectScreen(item._id)}>
-                        <View>
-                            <Text>title: {item.content} </Text>
-                        </View>
-                    </TouchableOpacity>
-            ))}
         </View>
         </SafeAreaView>
     );
