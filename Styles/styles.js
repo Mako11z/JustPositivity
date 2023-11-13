@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
     positivity_container: {
         justifyContent: 'center',
         alignItems: 'center',
-        borderWidth: 3,
         borderRadius: 30,
         height: 80,
         width: '95%',
@@ -56,31 +55,64 @@ const styles = StyleSheet.create({
 
       // Positive Entries Screen Styles
       positive_entries_container: {
-        borderRadius: 30,
-        height: 50,
-        width: '95%',
+        borderRadius: 45,
+        borderColor: 'green',
+        height: 90,
+        width: '97%',
         justifyContent: "center",
         alignItems: 'center',
-        marginLeft: 10,
-        marginBottom: 10,
+        marginLeft: 6,
+        marginBottom: 15,
         borderWidth: 1,
-        borderColor: 'gray',
         padding: 10,
+      },
+
+      positive_entries_text: {
+        fontSize: 20,
+      },
+
+      nav_container: {
+        height: 35,
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+
+      nav_text: {
+        fontSize: 20,
+      },
+
+      // Create Positivity Entry Styles
+      text_input: {
+        height: 100,
+        borderWidth: 3,
+        fontSize: 20,
       },
 
       // Reflection Screen Styles
       reflection_entries_container: {
-        borderRadius: 30,
-        height: 50,
-        width: '95%',
+        borderRadius: 45,
+        borderColor: 'green',
+        height: 90,
+        width: '97%',
         justifyContent: "center",
         alignItems: 'center',
-        marginLeft: 10,
-        marginBottom: 10,
+        marginLeft: 6,
+        marginBottom: 15,
         borderWidth: 1,
-        borderColor: 'gray',
         padding: 10,
-      }
+      },
+
+      reflection_entries_text: {
+        fontSize: 20,
+      },
+
+      pos_text_header_conatiner: {
+        justifyContent: 'center',
+        alignItems: 'center'
+      },
+      pos_text_header: {
+        fontSize: 22,
+      },
 
 });
 

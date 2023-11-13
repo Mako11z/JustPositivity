@@ -2,6 +2,7 @@ import { Text, View, TextInput, Button } from 'react-native';
 import realm from '../RealmFiles/realmConfig';
 import { createReflection, readPosEntries, readPosEntryByID } from "../RealmFiles/realmFunctions";
 import { useState } from 'react';
+import styles from '../Styles/styles';
 
 const CreateReflectionScreen = ({ route }) => {
     // Passed posEntry._id from PosMessageScreen
@@ -20,8 +21,12 @@ const CreateReflectionScreen = ({ route }) => {
     };
     return (
         <View>
-            <Text> {posEntry.content} </Text>
+            <View style={styles.pos_text_header_conatiner}>
+                <Text style={styles.pos_text_header}> {posEntry.content} </Text>
+            </View>
             <TextInput
+                    style={styles.text_input}
+                    multiline={true}
                     placeholder="Enter a new reflection"
                     value={reflectionContent} // Connection to reflectionContent state variable
                     onChangeText={(text) => setReflectionContent(text)}

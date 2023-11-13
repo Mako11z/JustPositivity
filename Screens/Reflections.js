@@ -23,7 +23,7 @@ const ReflectionScreen = ({ route }) => {
 
     const renderItem = ({ item }) => (
         <View style={styles.reflection_entries_container}>
-            <Text>{item.reflectContent}</Text>
+            <Text style={styles.reflection_entries_text}>{item.reflectContent}</Text>
         </View>
     );
 
@@ -34,11 +34,15 @@ const ReflectionScreen = ({ route }) => {
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <View style={{ flex: 1 }}>
-                <Text>{posEntry && posEntry.content}</Text>
+                <View style={styles.pos_text_header_conatiner}> 
+                    <Text style={styles.pos_text_header}>
+                        {posEntry?.content}
+                    </Text>
+                </View>
                 <Button title="Create Reflection" onPress={() => navToCreateReflectionScreen(posEntry._id)} />
                 <Text>Reflections:</Text>
                 <FlatList
-                    data={posEntry && posEntry.reflections}
+                    data={posEntry?.reflections}
                     renderItem={renderItem}
                     keyExtractor={(item) => item._id}
                 />

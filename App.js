@@ -87,7 +87,7 @@ const App = () => {
             <Text style={styles.title_text}> JustPositivity </Text>
           </View>
           <View style={styles.welcome_container}>
-            <Text style={styles.welcome_text}>Welcome Back Isaiah!</Text>
+            <Text style={styles.welcome_text}>Hello Isaiah!</Text>
           </View>
           <View style={styles.positivity_container}>
             <Text style={styles.daily_pos_text}>  {daily_pos} </Text>

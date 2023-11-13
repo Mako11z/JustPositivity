@@ -37,7 +37,7 @@ const PosMessageScreen = () => {
           onPress={() => navToReflectScreen(item._id)}
         >
           <View style={styles.positive_entries_container}>
-            <Text>{item.content}</Text>
+            <Text style={styles.positive_entries_text}> {item.content} </Text>
           </View>
         </TouchableOpacity>
       );
@@ -45,7 +45,11 @@ const PosMessageScreen = () => {
     return (
         <SafeAreaView style={{ flex: 1 }}>
         <View style={{ flex: 1 }}>
-            <Button title='Create your own positivity!' onPress={navToCreatePosEntryScreen} />
+            <TouchableOpacity onPress={() => navToCreatePosEntryScreen()}> 
+              <View style={styles.nav_container}>
+                <Text style={styles.nav_text}>Create your own!</Text>
+              </View>
+            </TouchableOpacity>
             <FlatList
                 data={posEntryData}
                 renderItem={renderItem}
