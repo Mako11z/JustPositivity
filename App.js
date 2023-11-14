@@ -48,10 +48,11 @@ const App = () => {
  
    const scheduleImmediateNotification = () => {
      // Generate new positive message
-     setDailyPos(generateRandomElement());
+     const newDailyPos = generateRandomElement();
+     setDailyPos(newDailyPos);
      PushNotification.localNotification({
        title: 'Daily Positivity',
-       message: `${daily_pos}`,
+       message: `${newDailyPos}`,
      });
    };
 

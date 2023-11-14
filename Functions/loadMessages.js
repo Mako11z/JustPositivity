@@ -4,6 +4,15 @@ import { createPosEntry, deleteAllEntries } from "../RealmFiles/realmFunctions";
 
 const loadPosMessages = () => {
     deleteAllEntries();
+    createPosEntry("Be different");
+    createPosEntry("Never quit fallowing your dreams");
+    createPosEntry("It’s okay to fail");
+    createPosEntry("Anything your going through does not last for ever");
+    createPosEntry("Be the reason someone smiles today");
+    createPosEntry("I’m thankful for you");
+    createPosEntry("How are you doing?");
+    createPosEntry("I love you");
+    createPosEntry("Are you okay?");
     createPosEntry("You are enough");
     createPosEntry("Its okay to mess up");
     createPosEntry("You are stronger than you think, and you can overcome any obstacle in your path.");
