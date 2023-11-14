@@ -17,3 +17,22 @@ The JustPositivity app is a platform designed to promote positivity by allowing 
 
    <img src="./Images/Explore_Positivity_Screen.png" alt="Explore Positivity" width="225" height="400" />
 </div>
+
+## Getting Started
+
+# Only Availible for IOS at the moment
+
+# Prerequisites
+
+- Make sure you have Node.js installed
+- Make sure your React-Native environment is up-to-date
+
+# Installation
+
+1. Clone the repository: https://github.com/Mako11z/JustPositivity/tree/master
+2. npm install
+3. Open two different terminals
+4. cd server side - node server.js
+5. npx react-native run-ios
+
+## More updates coming
