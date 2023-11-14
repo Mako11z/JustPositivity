@@ -1,4 +1,4 @@
-import { Text, View, TextInput, Button } from 'react-native';
+import { Text, View, TextInput, Button, TouchableOpacity } from 'react-native';
 import realm from '../RealmFiles/realmConfig';
 import { createPosEntry, readPosEntries } from '../RealmFiles/realmFunctions';
 import { useState } from 'react';
@@ -15,7 +15,9 @@ const CreatePosEntryScreen = () => {
     };
     return (
         <View>
-            <Text>Write something Positive</Text>
+            <View style={styles.create_pos_header_container}>
+                <Text style={styles.create_pos_header}>Write something Positive</Text>
+            </View>
             <TextInput
                 style={styles.text_input}
                 multiline={true}
@@ -23,7 +25,13 @@ const CreatePosEntryScreen = () => {
                 value={newPosEntryContent}
                 onChangeText={(text) => setPosEntryContent(text)}
             />
-            <Button title='Add new PosEntry' onPress={addNewPosEntry} />
+            <TouchableOpacity
+                onPress={() => addNewPosEntry()}
+            >
+                <View style={styles.add_new_entry_conatiner}>
+                    <Text style={styles.add_new_entry}>Add new PosEntry</Text>
+                </View>
+            </TouchableOpacity> 
         </View>
     );
 };

@@ -87,7 +87,11 @@ const App = () => {
             <Text style={styles.title_text}> JustPositivity </Text>
           </View>
           <View style={styles.welcome_container}>
-            <Text style={styles.welcome_text}>Hello Isaiah!</Text>
+            <Text style={styles.welcome_text}>Welcome back, </Text>
+            <Text style={styles.name_text}> Isaiah </Text>
+          </View>
+          <View style={styles.daily_pos_header_container}>
+            <Text style={styles.daily_pos_header_text}>Heres your daily dose of positivity!</Text>
           </View>
           <View style={styles.positivity_container}>
             <Text style={styles.daily_pos_text}>  {daily_pos} </Text>
@@ -99,8 +103,8 @@ const App = () => {
               navigation.navigate('PosMessage');
             }}
             style={styles.button}
-          > 
-            <Text>Postive Messages</Text>
+            > 
+            <Text style={styles.button_text}>Explore Positivity</Text>
           </TouchableOpacity>
           </View>
       </View>
@@ -109,7 +113,7 @@ const App = () => {
         <Stack.Screen
           name='PosMessage'
           component={PosMessageScreen}
-          options={{title: 'Positive Entries'}}
+          options={{title: 'Explore Positivity'}}
         />
         <Stack.Screen
           name='CreatePosEntry'

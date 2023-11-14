@@ -1,4 +1,4 @@
-import { Text, View, TextInput, Button } from 'react-native';
+import { Text, View, TextInput, Button, TouchableOpacity } from 'react-native';
 import realm from '../RealmFiles/realmConfig';
 import { createReflection, readPosEntries, readPosEntryByID } from "../RealmFiles/realmFunctions";
 import { useState } from 'react';
@@ -31,7 +31,13 @@ const CreateReflectionScreen = ({ route }) => {
                     value={reflectionContent} // Connection to reflectionContent state variable
                     onChangeText={(text) => setReflectionContent(text)}
                 />
-            <Button title="Create Reflection" onPress={addReflection} />
+            <TouchableOpacity
+                onPress={() => addReflection()}
+            >
+                <View style={styles.add_new_entry_conatiner}>
+                    <Text style={styles.add_new_entry}>Add Reflection</Text>
+                </View>
+            </TouchableOpacity> 
         </View>
     );
 };
