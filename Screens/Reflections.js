@@ -47,7 +47,7 @@ const ReflectionScreen = ({ route }) => {
                    </View>
                 </TouchableOpacity>
                 <View style={styles.reflection_header_conatiner}> 
-                    <Text style={styles.reflection_header}>Reflections:</Text>
+                    <Text style={styles.reflection_header}>Reflections</Text>
                 </View>
                 <FlatList
                     data={posEntry?.reflections}

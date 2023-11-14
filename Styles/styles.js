@@ -170,11 +170,14 @@ const styles = StyleSheet.create({
       },
 
       reflection_header: {
-        fontSize: 18,
+        fontSize: 20,
       },
 
       reflection_header_conatiner: {
-        justifyContent: 'left',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 50,
+        width: '100%',
       },
 
       pos_text_header_conatiner_reflections: {

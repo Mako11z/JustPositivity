@@ -118,7 +118,7 @@ const App = () => {
         <Stack.Screen
           name='CreatePosEntry'
           component={CreatePosEntryScreen}
-          options={{title: 'Create Positive Entry'}}
+          options={{title: 'Create Positivity'}}
         />
         <Stack.Screen
           name='Reflections'
@@ -128,7 +128,7 @@ const App = () => {
         <Stack.Screen
           name='CreateReflection'
           component={CreateReflectionScreen}
-          options={{title: 'Create you reflection'}}
+          options={{title: 'Create Reflection'}}
         />
       </Stack.Navigator>
     </NavigationContainer>
