@@ -35,6 +35,23 @@ const loadPosMessages = () => {
     createPosEntry("Your presence in this world makes it a better place; don't underestimate your impact.");
     createPosEntry("Gratitude can transform your life; focus on what you have, not what you lack.");
     createPosEntry("The future is bright, and you have the potential to make it even brighter.");
+    createPosEntry("Never loose hope");
+    createPosEntry("Don't be afraid to stand out");
+    createPosEntry("Don't be afraid to be different!");
+    createPosEntry("Smile");
+    createPosEntry("Stars shine brightest in the dark");
+    createPosEntry("Even the smallest flame can light the room");
+    createPosEntry("Be you");
+    createPosEntry("If I fall, I'll get back up");
+    createPosEntry("Don't let fear hold you back");
+    createPosEntry("That one choice you are afraid to make might be the one you need");
+    createPosEntry("Hey, you are doing a good job. I hope you know that");
+    createPosEntry("Thank you.");
+    createPosEntry("You are loved.");
+    createPosEntry("You are needed.");
+    createPosEntry("You are wanted.");
+    createPosEntry("You matter");
+    createPosEntry("You are beautiful");
 };
 
 export default loadPosMessages;
