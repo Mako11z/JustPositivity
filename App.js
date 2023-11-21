@@ -6,7 +6,7 @@
  */
 // This is the server
 import React, { useEffect, useState } from 'react';
-import { View, Text, SafeAreaView, TouchableOpacity, AppState, FlatList, Button } from 'react-native';
+import { View, Text, SafeAreaView, TouchableOpacity, AppState, FlatList } from 'react-native';
 import {createRealmContext} from '@realm/react';
 import realm from './RealmFiles/realmConfig';
 import {NavigationContainer, useNavigation} from '@react-navigation/native';
@@ -17,7 +17,7 @@ import ReflectionScreen from './Screens/Reflections';
 import CreatePosEntryScreen from './Screens/CreatePosEntry';
 import CreateReflectionScreen from './Screens/CreateReflection';
 
-import { createPosEntry, createReflection, deleteAllEntries, generateRandomElement } from './RealmFiles/realmFunctions';
+import { createPosEntry, createReflection, deleteAllEntries, generateRandomElement, findPosEntryIdByContent } from './RealmFiles/realmFunctions';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import PushNotification from 'react-native-push-notification';
 import WebSocket from 'react-native-websocket';
@@ -46,15 +46,22 @@ const App = () => {
       initilizeApp();
     }, []);
  
+   // Send a new notification and generate new daily_pos
    const scheduleImmediateNotification = () => {
      // Generate new positive message
      const newDailyPos = generateRandomElement();
      setDailyPos(newDailyPos);
      PushNotification.localNotification({
-       title: 'Daily Positivity',
+       title: 'JustPositivity',
        message: `${newDailyPos}`,
      });
    };
+
+   // Navigate to the create reflection screen
+   const navToCreateReflectionScreen = (nav, pos_content) => {
+      const pos_entry_id = findPosEntryIdByContent(pos_content);
+      nav.navigate('CreateReflection', { posEntryId: pos_entry_id.toHexString() });
+   }
 
   return (
     <NavigationContainer>
@@ -95,7 +102,11 @@ const App = () => {
             <Text style={styles.daily_pos_header_text}>Heres your daily dose of positivity!</Text>
           </View>
           <View style={styles.positivity_container}>
-            <Text style={styles.daily_pos_text}>  {daily_pos} </Text>
+            <TouchableOpacity 
+              onPress={() => navToCreateReflectionScreen(navigation, daily_pos)}
+            >
+               <Text style={styles.daily_pos_text}>  {daily_pos} </Text>
+            </TouchableOpacity>
           </View>
           <View style={styles.buttonContainer}>
             <TouchableOpacity

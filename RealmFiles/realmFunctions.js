@@ -87,3 +87,17 @@ export const generateRandomElement = () => {
     }
 };
 
+// Find PosEntry ._id based on .content
+export const findPosEntryIdByContent = (p_content) => {
+    try {
+      // '= $0' this is a placeholder for the content
+      // '[0]' returns the first object from the filtered results
+      const posEntry = realm.objects('PosEntry').filtered('content = $0', p_content)[0];
+      // return the ._id for the posEntry
+      return posEntry ? posEntry._id : null;
+    } catch (error) {
+      console.error("Error finding PosEntry _id by content", error);
+      return null;
+    }
+  };
+  
