@@ -27,7 +27,7 @@ const CreateReflectionScreen = ({ route }) => {
             <TextInput
                     style={styles.text_input}
                     multiline={true}
-                    placeholder="Enter a new reflection"
+                    placeholder="  Enter a new reflection"
                     value={reflectionContent} // Connection to reflectionContent state variable
                     onChangeText={(text) => setReflectionContent(text)}
                 />

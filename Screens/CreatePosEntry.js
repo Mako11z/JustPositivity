@@ -21,7 +21,7 @@ const CreatePosEntryScreen = () => {
             <TextInput
                 style={styles.text_input}
                 multiline={true}
-                placeholder='Write something positive'
+                placeholder='  Write something positive'
                 value={newPosEntryContent}
                 onChangeText={(text) => setPosEntryContent(text)}
             />
@@ -29,7 +29,7 @@ const CreatePosEntryScreen = () => {
                 onPress={() => addNewPosEntry()}
             >
                 <View style={styles.add_new_entry_conatiner}>
-                    <Text style={styles.add_new_entry}>Add new PosEntry</Text>
+                    <Text style={styles.add_new_entry}>Add new entry</Text>
                 </View>
             </TouchableOpacity> 
         </View>
