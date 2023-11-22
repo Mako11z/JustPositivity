@@ -90,25 +90,32 @@ const App = () => {
         options={{ title: 'Home' }}
       >
         {({ navigation }) => (
-        <View>
+        <View style={styles.home_container}>
           <View style={styles.title_container}>
-            <Text style={styles.title_text}> JustPositivity </Text>
+          <Text style={styles.justText}>Just</Text>
+          <Text style={styles.positivityText}>Positivity</Text>
           </View>
           <View style={styles.welcome_container}>
             <Text style={styles.welcome_text}>Welcome back, </Text>
             <Text style={styles.name_text}> Isaiah </Text>
           </View>
-          <View style={styles.daily_pos_header_container}>
-            <Text style={styles.daily_pos_header_text}>Heres your daily dose of positivity!</Text>
-          </View>
-          <View style={styles.positivity_container}>
+          <View style={styles.daily_pos_container}>
+            <View style={styles.daily_pos_header_container}>
+              <Text style={styles.daily_pos_text_daily}> Daily </Text>
+              <Text style={styles.daily_pos_text_positivity}> Positivity!</Text>
+            </View>
+            <View style={styles.positivity_container}>
             <TouchableOpacity 
               onPress={() => navToCreateReflectionScreen(navigation, daily_pos)}
             >
                <Text style={styles.daily_pos_text}>  {daily_pos} </Text>
             </TouchableOpacity>
+            </View>
           </View>
-          <View style={styles.buttonContainer}>
+          <View style={styles.button_header_container_exlpore}>
+            <Text style={styles.button_header_text}>Explore!</Text>
+          </View>
+          <View>
             <TouchableOpacity
              title="Positive Messages"
               onPress={() => {
@@ -116,7 +123,7 @@ const App = () => {
             }}
             style={styles.button}
             > 
-            <Text style={styles.button_text}>Explore Positivity</Text>
+            <Text style={styles.button_text}>Positivity Messages</Text>
           </TouchableOpacity>
           </View>
       </View>
