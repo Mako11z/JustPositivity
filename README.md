@@ -19,7 +19,7 @@ The JustPositivity app is a platform designed to promote positivity by allowing 
 </div>
 
 <div align="center">
-  <h1>Get daily notificatiosn of positivity</h1>
+  <h1>Daily Positivity!</h1>
   <img src=Images/Notifications.png style="width: 200px; height: auto;">
 </div>
 
