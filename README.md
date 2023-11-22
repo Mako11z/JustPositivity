@@ -18,7 +18,7 @@ The JustPositivity app is a platform designed to promote positivity by allowing 
    <img src="./Images/Explore_Positivity_Screen.png" alt="Explore Positivity" width="245" height="400" />
 </div>
 
-![Uploading JustPositivityWalkthrough-2.gif…]()
+![](JustPositivityWalkthrough-2.gif)
 
 
 ## Getting Started
