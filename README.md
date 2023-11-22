@@ -12,9 +12,8 @@ The JustPositivity app is a platform designed to promote positivity by allowing 
 - Explore Positivity: Scroll through a feed of positive entries from other users for inspiration and connection.
 - User-friendly Interface: The app provides a simple and intuitive user interface for a seamless experience.
 
-<div align="center">
-   <img src="./Images/Notifications.png" alt="Notifications" width="245" height="400" />
-</div>
+
+
 ![](https://github.com/Mako11z/JustPositivity/blob/master/JustPositivityWalkthrough-2.gif)
 
 
