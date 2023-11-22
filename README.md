@@ -18,6 +18,10 @@ The JustPositivity app is a platform designed to promote positivity by allowing 
   <img src="https://github.com/Mako11z/JustPositivity/blob/master/JustPositivityWalkthrough-2.gif" alt="JustPositivity Walkthrough">
 </div>
 
+<div align="center">
+  <h1>Get daily notificatiosn of positivity</h1>
+</div>
+
 
 
 
