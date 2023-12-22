@@ -2,7 +2,7 @@
 
 ## Overview
 
-The JustPositivity app is a platform designed to promote positivity by allowing users to create and share positive entries. Whether it's a moment of gratitude, a personal achievement, or a source of inspiration, JustPositivity is a space to celebrate and share positivity.
+  JustPositivity is a platform designed to promote positivity by allowing users to reflect and create positive entries. Whether it's a moment of gratitude, a personal achievement, or a source of inspiration, JustPositivity is a space to celebrate positivity.
 
 ## Features
 
