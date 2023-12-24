@@ -15,7 +15,8 @@
 
 <div align="center">
   <h1>Walkthrough!</h1>
-  <img src="https://github.com/Mako11z/JustPositivity/blob/master/ezgif.com-video-to-gif-converted.gif" alt="JustPositivity Walkthrough">
+  <iframe width="500" height="300" src="https://github.com/Mako11z/JustPositivity/blob/master/ezgif.com-video-to-gif-converted.gif" frameborder="0" allowfullscreen></iframe>
+
 </div>
 
 <div align="center">
