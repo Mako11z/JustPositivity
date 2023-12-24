@@ -15,7 +15,7 @@
 
 <div align="center">
   <h1>Walkthrough!</h1>
-  <img src="https://github.com/Mako11z/JustPositivity/blob/master/JustPositivityWalkthrough-2.gif" alt="JustPositivity Walkthrough">
+  <img src="[https://github.com/Mako11z/JustPositivity/blob/master/JustPositivityWalkthrough-2.gif](https://github.com/Mako11z/JustPositivity/blob/master/JustPositivityW.gif)" alt="JustPositivity Walkthrough">
 </div>
 
 <div align="center">
