@@ -2,7 +2,7 @@
 
 ## Overview
 
-The JustPositivity app is a platform designed to promote positivity by allowing users to create and share positive entries. Whether it's a moment of gratitude, a personal achievement, or a source of inspiration, JustPositivity is a space to celebrate and share positivity.
+  JustPositivity is a platform designed to promote positivity by allowing users to reflect and create positive entries. Whether it's a moment of gratitude, a personal achievement, or a source of inspiration, JustPositivity is a space to celebrate positivity.
 
 ## Features
 
@@ -12,11 +12,19 @@ The JustPositivity app is a platform designed to promote positivity by allowing 
 - Explore Positivity: Scroll through a feed of positive entries from other users for inspiration and connection.
 - User-friendly Interface: The app provides a simple and intuitive user interface for a seamless experience.
 
-<div align="center">
-   <img src="./Images/Home_Screen.png" alt="Home" width="245" height="400" /> <img src="./Images/Reflection_Screen.png" alt="Reflection" width="245" height="400" /> <img src="./Images/Create_Reflection_Screen.png" alt="Create Reflection" width="245" height="400" /> <img src="./Images/Notifications.png" alt="Notifications" width="245" height="400" />
 
-   <img src="./Images/Explore_Positivity_Screen.png" alt="Explore Positivity" width="245" height="400" />
+<div align="center">
+  <h1>Walkthrough!</h1>
+  <img src="https://github.com/Mako11z/JustPositivity/blob/master/JustPositivityWalkthrough-2.gif" alt="JustPositivity Walkthrough">
 </div>
+
+<div align="center">
+  <h1>Daily Positivity!</h1>
+  <img src=Images/Notifications.png style="width: 200px; height: auto;">
+</div>
+
+
+
 
 ## Getting Started
 
