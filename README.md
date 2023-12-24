@@ -16,7 +16,6 @@
 <div align="center">
   <h1>Walkthrough!</h1>
   ![Alt Text](https://github.com/Mako11z/JustPositivity/blob/master/ezgif.com-video-to-gif-converted.gif)
-
 </div>
 
 <div align="center">
