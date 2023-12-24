@@ -12,17 +12,15 @@
 - Explore Positivity: Scroll through a feed of positive entries from other users for inspiration and connection.
 - User-friendly Interface: The app provides a simple and intuitive user interface for a seamless experience.
 
-
 <div align="center">
   <h1>Walkthrough!</h1>
+  <img src="https://github.com/Mako11z/JustPositivity/raw/master/ezgif.com-video-to-gif-converted.gif" alt="JustPositivity Walkthrough">
 </div>
-![Alt Text](https://github.com/Mako11z/JustPositivity/blob/master/ezgif.com-video-to-gif-converted.gif)
 
 <div align="center">
   <h1>Daily Positivity!</h1>
-  <img src=Images/Notifications.png style="width: 200px; height: auto;">
+  <img src="https://github.com/Mako11z/JustPositivity/raw/master/Images/Notifications.png" style="width: 200px; height: auto;">
 </div>
-
 
 
 
