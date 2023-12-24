@@ -5701,6 +5701,11 @@ react-native-get-random-values@^1.9.0:
   dependencies:
     fast-base64-decode "^1.0.0"
 
+react-native-linear-gradient@^2.8.3:
+  version "2.8.3"
+  resolved "https://registry.npmjs.org/react-native-linear-gradient/-/react-native-linear-gradient-2.8.3.tgz"
+  integrity sha512-KflAXZcEg54PXkLyflaSZQ3PJp4uC4whM7nT/Uot9m0e/qxFV3p6uor1983D1YOBJbJN7rrWdqIjq0T42jOJyA==
+
 react-native-notifications@^5.1.0:
   version "5.1.0"
   resolved "https://registry.npmjs.org/react-native-notifications/-/react-native-notifications-5.1.0.tgz"

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Realm from "realm";
-import { View, Text, SafeAreaView, TouchableOpacity, Button, TextInput, FlatList } from 'react-native';
+import { View, Text, SafeAreaView, TouchableOpacity, Button, TextInput, FlatList, ImageBackground } from 'react-native';
 import { readPosEntryByID } from "../RealmFiles/realmFunctions";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import styles from "../Styles/styles";
@@ -33,6 +33,11 @@ const ReflectionScreen = ({ route }) => {
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
+            <ImageBackground
+                source={require('../Images/JP-Background.png')}
+                style={styles.backgroundImage}
+                resizeMode="cover"
+            >
             <View style={{ flex: 1 }}>
                 <View style={styles.pos_text_header_conatiner_reflections}> 
                     <Text style={styles.pos_text_header}>
@@ -55,6 +60,7 @@ const ReflectionScreen = ({ route }) => {
                     keyExtractor={(item) => item._id}
                 />
             </View>
+            </ImageBackground>
         </SafeAreaView>
     );
 };

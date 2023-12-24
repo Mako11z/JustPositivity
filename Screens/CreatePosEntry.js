@@ -1,4 +1,4 @@
-import { Text, View, TextInput, Button, TouchableOpacity } from 'react-native';
+import { Text, View, TextInput, Button, TouchableOpacity, ImageBackground } from 'react-native';
 import realm from '../RealmFiles/realmConfig';
 import { createPosEntry, readPosEntries } from '../RealmFiles/realmFunctions';
 import { useState } from 'react';
@@ -15,6 +15,11 @@ const CreatePosEntryScreen = () => {
     };
     return (
         <View>
+            <ImageBackground
+                source={require('../Images/JP-Background.png')}
+                style={styles.backgroundImage}
+                resizeMode="cover"
+            >
             <View style={styles.create_pos_header_container}>
                 <Text style={styles.create_pos_header}>Write something Positive</Text>
             </View>
@@ -32,6 +37,7 @@ const CreatePosEntryScreen = () => {
                     <Text style={styles.add_new_entry}>Add new entry</Text>
                 </View>
             </TouchableOpacity> 
+            </ImageBackground>
         </View>
     );
 };

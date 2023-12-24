@@ -6,7 +6,7 @@
  */
 // This is the server
 import React, { useEffect, useState } from 'react';
-import { View, Text, SafeAreaView, TouchableOpacity, AppState, FlatList } from 'react-native';
+import { View, Text, SafeAreaView, TouchableOpacity, AppState, FlatList, ImageBackground } from 'react-native';
 import {createRealmContext} from '@realm/react';
 import realm from './RealmFiles/realmConfig';
 import {NavigationContainer, useNavigation} from '@react-navigation/native';
@@ -24,6 +24,7 @@ import WebSocket from 'react-native-websocket';
 import loadPosMessages from './Functions/loadMessages';
 
 import styles from './Styles/styles';
+
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -91,27 +92,28 @@ const App = () => {
       >
         {({ navigation }) => (
         <View style={styles.home_container}>
+          <ImageBackground
+          source={require('./Images/JP-Background.png')}
+          style={styles.backgroundImage}
+          resizeMode="cover"
+          >
           <View style={styles.title_container}>
-          <Text style={styles.justText}>Just</Text>
-          <Text style={styles.positivityText}>Positivity</Text>
+              <Text style={styles.justText}>Just</Text>
+              <Text style={styles.positivityText}>Positivity</Text>
           </View>
           <View style={styles.welcome_container}>
-            <Text style={styles.welcome_text}>Welcome back, </Text>
-            <Text style={styles.name_text}> Isaiah </Text>
+            <Text style={styles.welcome_text}>Hi, Isaiah </Text>
           </View>
-          <View style={styles.daily_pos_container}>
             <View style={styles.daily_pos_header_container}>
-              <Text style={styles.daily_pos_text_daily}> Daily </Text>
-              <Text style={styles.daily_pos_text_positivity}> Positivity!</Text>
+              <Text style={styles.daily_pos_text_daily}> Daily Positivity</Text>
             </View>
             <View style={styles.positivity_container}>
-            <TouchableOpacity 
-              onPress={() => navToCreateReflectionScreen(navigation, daily_pos)}
-            >
-               <Text style={styles.daily_pos_text}>  {daily_pos} </Text>
+              <TouchableOpacity 
+                onPress={() => navToCreateReflectionScreen(navigation, daily_pos)}
+              >
+                <Text style={styles.daily_pos_text}>  {daily_pos} </Text>
             </TouchableOpacity>
             </View>
-          </View>
           <View style={styles.button_header_container_exlpore}>
             <Text style={styles.button_header_text}>Explore!</Text>
           </View>
@@ -126,6 +128,7 @@ const App = () => {
             <Text style={styles.button_text}>Positivity Messages</Text>
           </TouchableOpacity>
           </View>
+          </ImageBackground>
       </View>
        )}
       </Stack.Screen>

@@ -6,31 +6,48 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         justifyContent: 'center',
         alignItems: 'center',
-        width: '65%',
-        height: 130,
+        width: '75%',
+        height: '30%',
         borderRadius: 30,
         backgroundColor: 'rebeccapurple',
-        borderColor: 'rebeccapurple',
+        borderColor: 'white',
+        borderRightWidth: 7,
+        borderLeftWidth: 0,
+        borderTopWidth: 0,
+        borderBottomWidth: 4,
+        borderBottomColor: 'plum',
+        borderRightColor: 'plum',
+        marginLeft: 50,
+        marginTop: 20,
+        marginBottom: 5,
     },
     home_container: {
       flex: 1,
+      justifyContent: 'center', // Center content vertically
+      alignItems: 'center',  
+    },
+    backgroundImage: {
+      width: '100%', // Ensure the image takes the full width
+      height: '100%', // Ensure the image takes the full height
+      resizeMode: 'cover',
+      justifyContent: 'center', // Adjust this based on your layout requirements
     },
 
     daily_pos_text: {
         fontSize: 23,
-        paddingLeft: 5,
-        paddingRight: 5,
+        paddingLeft: 10,
+        paddingRight: 10,
         color: 'white',
     },
 
     daily_pos_text_daily: {
-      fontSize: 25,
-      color: 'palevioletred',
+      fontSize: 22,
+      color: 'white',
       fontWeight: 'bold',
     },
     daily_pos_text_positivity: {
       fontSize: 25,
-      color: 'palevioletred',
+      color: 'white',
       fontWeight: 'bold',
     },
 
@@ -41,75 +58,85 @@ const styles = StyleSheet.create({
     },
 
     daily_pos_container: {
-      marginBottom: 15,
       width: '100%',
       flexDirection: 'row',
       justifyContent: 'space-evenly',
-      marginBottom: 40,
+      marginBottom: 20,
     },
 
     welcome_container: {
-        marginBottom: 20,
         height: 75,
         width: '95%',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginBottom: 75,
+        justifyContent: 'left',
+        alignItems: 'left',
+        marginBottom: 20,
+        marginTop: 0,
     },
 
     welcome_text: {
-        fontSize: 35,
-        color: 'deepskyblue',
+        fontSize: 30,
+        color: 'white',
+        fontFamily: 'Helvetica Neue',
+        fontWeight: 'bold',
+        paddingLeft: 10,
     },
 
     name_text: {
       fontSize: 40,
       paddingLeft: 9,
-      color: 'orchid',
+      color: 'black',
     },
 
     title_container: {
         alignItems: 'center',
-        justifyContent: 'center',
-        marginBottom: 20,
+        justifyContent: 'left',
+        marginBottom: 0,
         flexDirection: 'row',
     },
 
     justText: {
-      fontSize: 50,
-      fontFamily: 'bold',
-      paddingTop: 15,
-      color: 'dodgerblue',
+      fontSize: 45,
+      fontWeight: 'bold',
+      fontFamily: 'Helvetica',
+      paddingTop: 20,
+      paddingLeft: 8,
+      color: 'white',
     },
-
+    
     positivityText: {
-      fontSize: 50,
-      fontFamily: 'bold',
-      paddingTop: 15,
-      color: 'blueviolet',
+      fontSize: 45,
+      fontWeight: 'bold',
+      fontFamily: 'Helvetica',
+      paddingTop: 20,
+      color: 'white',
     },
 
     button_header_container_exlpore: {
       alignItems: 'center',
       justifyContent: 'center',
       marginBottom: 20,
+      marginTop: 30,
     },
 
     button_header_text: {
       fontSize: 39,
       fontWeight: 'bold',
-      color: 'royalblue',
+      color: 'white',
     },
 
     button: {
         padding: 10,
-        borderWidth: 3,
+        borderRightWidth: 5,
+        borderRightColor: 'plum',
+        borderBottomColor: 'plum',
+        borderBottomWidth: 4,
         borderColor: 'rebeccapurple',
         backgroundColor: 'rebeccapurple',
         borderRadius: 33,
         width: '95%',
         height: 90,
         marginLeft: 7,
+        marginBottom: 25,
         alignItems: 'center',
         justifyContent: 'center',
       },
@@ -130,6 +157,10 @@ const styles = StyleSheet.create({
         marginLeft: 6,
         marginBottom: 15,
         borderWidth: 1,
+        borderRightWidth: 5,
+        borderRightColor: 'plum',
+        borderBottomColor: 'plum',
+        borderBottomWidth: 4,
         borderColor: 'rebeccapurple',
         backgroundColor: 'rebeccapurple',
         padding: 10,
@@ -146,13 +177,15 @@ const styles = StyleSheet.create({
         height: 50,
         justifyContent: 'center',
         alignItems: 'center',
+        borderBottomColor: 'plum',
+        borderBottomWidth: 2,
         marginBottom: 10,
         margin: 10,
       },
 
       nav_text: {
         fontSize: 30,
-        color: 'palevioletred',
+        color: 'white',
       },
 
       // Create Positivity Entry Styles
@@ -160,10 +193,12 @@ const styles = StyleSheet.create({
         height: 350,
         width: '95%',
         marginLeft: 10,
-        borderWidth: 3,
-        borderColor: 'rebeccapurple',
+        borderWidth: 0,
+        
+        backgroundColor: 'white',
         paddingLeft: 9,
         fontSize: 20,
+        color: 'black',
         borderRadius: 20,
       },
 
@@ -178,6 +213,10 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'rebeccapurple',
         backgroundColor: 'rebeccapurple',
+        borderRightWidth: 5,
+        borderRightColor: 'plum',
+        borderBottomColor: 'plum',
+        borderBottomWidth: 4,
         borderRadius: 30,
         marginTop: 20,
         width: '70%',
@@ -195,7 +234,7 @@ const styles = StyleSheet.create({
       create_pos_header: {
         fontSize: 25,
         fontWeight: 'bold',
-        color: 'deepskyblue',
+        color: 'white',
       },
 
       // Reflection Screen Styles
@@ -210,6 +249,10 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'rebeccapurple',
         backgroundColor: 'rebeccapurple',
+        borderRightColor: 4,
+        borderBottomWidth: 5,
+        borderRightColor: 'plum',
+        borderBottomColor: 'plum',
         padding: 10,
       },
 
@@ -222,6 +265,10 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'rebeccapurple',
         backgroundColor: 'rebeccapurple',
+        borderRightWidth: 4,
+        borderBottomWidth: 3,
+        borderRightColor: 'plum',
+        borderBottomColor: 'plum',
         borderRadius: 30,
         justifyContent: 'center',
         alignItems: 'center',
@@ -237,7 +284,7 @@ const styles = StyleSheet.create({
 
       reflection_header: {
         fontSize: 28,
-        color: 'royalblue',
+        color: 'white',
         fontFamily: 'bold',
       },
 
@@ -264,7 +311,7 @@ const styles = StyleSheet.create({
       },
       pos_text_header: {
         fontSize: 28,
-        color: 'palevioletred',
+        color: 'white',
       },
 
 });

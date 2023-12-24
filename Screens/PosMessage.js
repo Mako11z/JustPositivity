@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, TouchableOpacity, Button, TextInput, FlatList } from 'react-native';
+import { View, Text, SafeAreaView, TouchableOpacity, Button, TextInput, FlatList, ImageBackground } from 'react-native';
 import {createRealmContext} from '@realm/react';
 import realm from '../RealmFiles/realmConfig';
 import { createPosEntry, readPosEntries } from '../RealmFiles/realmFunctions';
@@ -44,10 +44,15 @@ const PosMessageScreen = () => {
     
     return (
         <SafeAreaView style={{ flex: 1 }}>
+          <ImageBackground
+          source={require('../Images/JP-Background.png')}
+          style={styles.backgroundImage}
+          resizeMode="cover"
+          >
         <View style={{ flex: 1 }}>
             <TouchableOpacity onPress={() => navToCreatePosEntryScreen()}> 
               <View style={styles.nav_container}>
-                <Text style={styles.nav_text}>Create your own!</Text>
+                <Text style={styles.nav_text}>Create your own</Text>
               </View>
             </TouchableOpacity>
             <FlatList
@@ -56,6 +61,7 @@ const PosMessageScreen = () => {
                 keyExtractor={(item) => item._id}
             />
         </View>
+        </ImageBackground>
         </SafeAreaView>
     );
 };

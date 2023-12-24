@@ -1,4 +1,4 @@
-import { Text, View, TextInput, Button, TouchableOpacity } from 'react-native';
+import { Text, View, TextInput, Button, TouchableOpacity, ImageBackground } from 'react-native';
 import realm from '../RealmFiles/realmConfig';
 import { createReflection, readPosEntries, readPosEntryByID } from "../RealmFiles/realmFunctions";
 import { useState } from 'react';
@@ -21,6 +21,11 @@ const CreateReflectionScreen = ({ route }) => {
     };
     return (
         <View>
+            <ImageBackground
+                source={require('../Images/JP-Background.png')}
+                style={styles.backgroundImage}
+                resizeMode="cover"
+            >
             <View style={styles.pos_text_header_conatiner}>
                 <Text style={styles.pos_text_header}> {posEntry.content} </Text>
             </View>
@@ -38,6 +43,7 @@ const CreateReflectionScreen = ({ route }) => {
                     <Text style={styles.add_new_entry}>Add Reflection</Text>
                 </View>
             </TouchableOpacity> 
+            </ImageBackground>
         </View>
     );
 };
