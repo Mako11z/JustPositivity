@@ -19,7 +19,7 @@
 
 <div align="center">
   <h1>Daily Positivity!</h1>
-  <img src="https://github.com/Mako11z/JustPositivity/raw/master/Images/Notifications.png" style="width: 200px; height: auto;">
+  <img src="https://github.com/Mako11z/JustPositivity/raw/master/Images/Notifications.png" style="width: 300px; height: auto;">
 </div>
 
 
